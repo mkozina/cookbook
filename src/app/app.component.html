@@ -1,7 +1,17 @@
 <h1>{{title}}</h1>
-<h2>{{recipe.name}} details!</h2>
-<div><label>ID: </label>{{recipe.id}}</div>
-<div>
-	<label>Name: </label>
-	<input [(ngModel)]="recipe.name" placeholder="name">
+<h2>My Recipes</h2>
+<ul class="recipes">
+	<li *ngFor="let recipe of recipes"
+		[class.selected]="recipe === selectedRecipe"
+		(click)="onSelect(recipe)">
+		<span class="id">{{recipe.id}}</span> {{recipe.name}}
+	</li>
+</ul>
+<div *ngIf="selectedRecipe">
+	<h2>{{selectedRecipe.name}} details!</h2>
+	<div><label>ID: </label>{{selectedRecipe.id}}</div>
+	<div>
+		<label>Name: </label>
+		<input [(ngModel)]="selectedRecipe.name" placeholder="name">
+	</div>
 </div>
