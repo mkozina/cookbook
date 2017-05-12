@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
 
-export class Recipe {
-  id: number;
-  name: string;
-}
+import { Recipe } from './recipe'
 
 const RECIPES: Recipe[] = [
 	{ id: 1, name: 'Warabi Mochi' },
