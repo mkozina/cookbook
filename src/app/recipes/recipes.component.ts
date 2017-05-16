@@ -10,7 +10,7 @@ import { RecipeService } from '../recipe.service';
   providers: [RecipeService]
 })
 export class RecipesComponent implements OnInit {
-  title = 'Ryourisho';
+
   recipes: Recipe[];
   selectedRecipe: Recipe;
 
