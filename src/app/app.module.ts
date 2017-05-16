@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 import { RecipesComponent } from './recipes/recipes.component';
 import { RecipeService } from './recipe.service';
@@ -12,6 +13,7 @@ import { RecipeService } from './recipe.service';
 @NgModule({
   declarations: [
     AppComponent,
+    DashboardComponent,
     RecipeDetailComponent,
     RecipesComponent
   ],
@@ -20,6 +22,15 @@ import { RecipeService } from './recipe.service';
     FormsModule,
     HttpModule,
     RouterModule.forRoot([
+      {
+        path: '',
+        redirectTo: '/dashboard',
+        pathMatch: 'full'
+      },
+      {
+        path: 'dashboard',
+        component: DashboardComponent
+      },
       {
         path: 'recipes',
         component: RecipesComponent
