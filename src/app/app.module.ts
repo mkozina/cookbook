@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
@@ -17,7 +18,13 @@ import { RecipeService } from './recipe.service';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot([
+      {
+        path: 'recipes',
+        component: RecipesComponent
+      }
+    ])
   ],
   providers: [
     RecipeService
