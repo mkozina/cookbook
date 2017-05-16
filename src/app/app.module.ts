@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 import { RecipesComponent } from './recipes/recipes.component';
+import { RecipeService } from './recipe.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { RecipesComponent } from './recipes/recipes.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    RecipeService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
