@@ -6,16 +6,16 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 import { RecipesComponent } from './recipes/recipes.component';
+import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 import { RecipeService } from './recipe.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    RecipeDetailComponent,
-    RecipesComponent
+    RecipesComponent,
+    RecipeDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +34,10 @@ import { RecipeService } from './recipe.service';
       {
         path: 'recipes',
         component: RecipesComponent
+      },
+      {
+        path: 'detail/:id',
+        component: RecipeDetailComponent
       }
     ])
   ],

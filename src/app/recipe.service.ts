@@ -12,4 +12,9 @@ export class RecipeService {
     return Promise.resolve(RECIPES);
   }
 
+  getRecipe(id: number): Promise<Recipe> {
+    return this.getRecipes()
+      .then(recipes => recipes.find(recipe => recipe.id === id));
+  }
+
 }
