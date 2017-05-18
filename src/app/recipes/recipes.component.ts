@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Recipe } from '../recipe';
 import { RecipeService } from '../recipe.service';
@@ -13,7 +14,10 @@ export class RecipesComponent implements OnInit {
   recipes: Recipe[];
   selectedRecipe: Recipe;
 
-  constructor(private recipeService: RecipeService) { }
+  constructor(
+    private router: Router,
+    private recipeService: RecipeService
+  ) { }
 
   getRecipes(): void {
     this.recipeService.getRecipes().then(recipes => this.recipes = recipes);
@@ -21,6 +25,10 @@ export class RecipesComponent implements OnInit {
 
   onSelect(recipe: Recipe): void {
     this.selectedRecipe = recipe;
+  }
+
+  gotoDetail(): void {
+    this.router.navigate(['/detail', this.selectedRecipe.id]);
   }
 
   ngOnInit(): void {

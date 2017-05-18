@@ -6,4 +6,9 @@
 		<span class="id">{{recipe.id}}</span> {{recipe.name}}
 	</li>
 </ul>
-<app-recipe-detail [recipe]="selectedRecipe"></app-recipe-detail>
+<div *ngIf="selectedRecipe">
+	<h2>
+		Recipe for {{selectedRecipe.name | uppercase}}
+	</h2>
+	<button (click)="gotoDetail()">View Details</button>
+</div>
