@@ -3,7 +3,7 @@
 	<li *ngFor="let recipe of recipes"
 		[class.selected]="recipe === selectedRecipe"
 		(click)="onSelect(recipe)">
-		<span class="id">{{recipe.id}}</span> {{recipe.name}}
+		<span class="badge">{{recipe.id}}</span> {{recipe.name}}
 	</li>
 </ul>
 <div *ngIf="selectedRecipe">
