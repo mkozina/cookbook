@@ -26,6 +26,11 @@ export class RecipeDetailComponent implements OnInit {
     this.location.back();
   }
 
+  save(): void {
+    this.recipeService.update(this.recipe)
+      .then(() => this.goBack());
+  }
+
   ngOnInit(): void {
     this.route.params
       .switchMap((params: Params) => this.recipeService.getRecipe(+params['id']))
