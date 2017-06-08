@@ -31,6 +31,16 @@ export class RecipesComponent implements OnInit {
     this.router.navigate(['/detail', this.selectedRecipe.id]);
   }
 
+  add(name: string): void {
+    name = name.trim();
+    if (!name) { return; }
+    this.recipeService.create(name)
+      .then(recipe => {
+        this.recipes.push(recipe);
+        this.selectedRecipe = null;
+    });
+  }
+
   ngOnInit(): void {
     this.getRecipes();
   }
