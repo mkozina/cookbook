@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Backend
 
-First you must run backend: [cookbook-backend](https://github.com/mkozina/cookbook-backend).
+Before running server or building project, read about backend: [cookbook-backend](https://github.com/mkozina/cookbook-backend).
 
 ## Development server
 
