@@ -1,4 +1,4 @@
-<h2>My Recipes</h2>
+<h2>My recipes</h2>
 <p>
 	<button (click)="gotoForm()">Add</button>
 </p>
@@ -15,7 +15,10 @@
 </ul>
 <div *ngIf="selectedRecipe">
 	<h2>
-		Recipe for {{selectedRecipe.name | uppercase}}
+		Recipe for {{selectedRecipe.name}}
 	</h2>
-	<button (click)="gotoDetail()">View Details</button>
+	<h3>Instructions:</h3>
+	<p>{{selectedRecipe.instructions}}</p>
+	<button (click)="gotoDetail()">Edit</button>
+	<button (click)="delete(recipe)">Delete</button>
 </div>

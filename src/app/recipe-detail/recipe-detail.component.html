@@ -1,11 +1,10 @@
 <div *ngIf="recipe">
-	<h2>{{recipe.name}} details!</h2>
+	<h2>Edit recipe</h2>
 	<div>
 		<label>Name: </label>
 		<input [(ngModel)]="recipe.name" placeholder="name">
-	</div>
-	<div>
-		<label>Instructions: </label><textarea [(ngModel)]="recipe.instructions"></textarea>
+		<label>Instructions: </label>
+		<textarea [(ngModel)]="recipe.instructions"></textarea>
 	</div>
 	<button (click)="goBack()">Back</button>
 	<button (click)="save()">Save</button>
