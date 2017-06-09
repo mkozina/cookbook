@@ -41,6 +41,15 @@ export class RecipesComponent implements OnInit {
     });
   }
 
+  delete(recipe: Recipe): void {
+    this.recipeService
+      .delete(recipe.id)
+      .then(() => {
+        this.recipes = this.recipes.filter(h => h !== recipe);
+        if (this.selectedRecipe === recipe) { this.selectedRecipe = null; }
+      });
+  }
+
   ngOnInit(): void {
     this.getRecipes();
   }

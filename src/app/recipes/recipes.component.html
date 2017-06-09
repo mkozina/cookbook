@@ -9,7 +9,12 @@
 	<li *ngFor="let recipe of recipes"
 		[class.selected]="recipe === selectedRecipe"
 		(click)="onSelect(recipe)">
-		<span class="badge">{{recipe.id}}</span> {{recipe.name}}
+		<span class="badge">{{recipe.id}}</span>
+		<span>{{recipe.name}}</span>
+		<button class="delete"
+			(click)="delete(recipe); $event.stopPropagation()">
+			x
+		</button>
 	</li>
 </ul>
 <div *ngIf="selectedRecipe">
