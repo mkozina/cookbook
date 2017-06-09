@@ -1,12 +1,19 @@
 label {
-  display: inline-block;
+  display: block;
   width: 3em;
-  margin: .5em 0;
+  margin: 1.5em 0 .5em 0;
   color: #607D8B;
   font-weight: bold;
 }
 input {
+  width: 20em;
   height: 2em;
+  font-size: 1em;
+  padding-left: .4em;
+}
+textarea {
+  width: 20em;
+  height: 16em;
   font-size: 1em;
   padding-left: .4em;
 }
