@@ -1,0 +1,6 @@
+<div *ngIf="recipe">
+	<h2>Recipe for {{recipe.name}}</h2>
+	<h3>Instructions:</h3>
+	<p>{{recipe.instructions}}</p>
+	<button (click)="goBack()">Back</button>
+</div>
