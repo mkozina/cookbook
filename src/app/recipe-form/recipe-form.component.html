@@ -1,0 +1,11 @@
+<div>
+	<h2>Add new recipe</h2>
+	<div>
+		<label>Name:</label> <input #name />
+		<label>Instructions:</label><textarea #instructions ></textarea>
+	</div>
+	<button (click)="goBack()">Back</button>
+	<button (click)="add(name.value, instructions.value)">
+		Add
+	</button>
+</div>
