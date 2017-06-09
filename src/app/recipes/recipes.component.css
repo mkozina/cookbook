@@ -29,7 +29,8 @@
 }
 .recipes .text {
   position: relative;
-  top: -3px;
+  top: 3px;
+  left: 12px;
 }
 .recipes .badge {
   display: inline-block;
