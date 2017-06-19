@@ -8,8 +8,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   title = 'Your Cookbook Online';
+  isIn = false;
 
   constructor() { }
+
+  toggleState() {
+    let bool = this.isIn;
+    this.isIn = bool === false ? true : false;
+  }
 
   ngOnInit() {
   }
