@@ -6,12 +6,12 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { RecipesComponent } from './recipes/recipes.component';
-import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
-import { RecipeService } from './recipe.service';
-import { RecipeFormComponent } from './recipe-form/recipe-form.component';
-import { RecipeInfoComponent } from './recipe-info/recipe-info.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { RecipesComponent } from './components/recipes/recipes.component';
+import { RecipeDetailComponent } from './components/recipe-detail/recipe-detail.component';
+import { RecipeService } from './services/recipe.service';
+import { RecipeFormComponent } from './components/recipe-form/recipe-form.component';
+import { RecipeInfoComponent } from './components/recipe-info/recipe-info.component';
 
 @NgModule({
   declarations: [

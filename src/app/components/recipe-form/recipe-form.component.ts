@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 
-import { RecipeService } from '../recipe.service';
+import { RecipeService } from '../../services/recipe.service';
 
 @Component({
   selector: 'app-recipe-form',

@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  title = 'Ryourisho';
+  title = 'Your Cookbook Online';
 
   constructor() { }
 

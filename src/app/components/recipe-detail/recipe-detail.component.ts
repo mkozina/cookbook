@@ -2,17 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { Recipe } from '../recipe';
-import { RecipeService } from '../recipe.service';
+import { Recipe } from '../../models/recipe.model';
+import { RecipeService } from '../../services/recipe.service';
 
 import 'rxjs/add/operator/switchMap';
 
 @Component({
-  selector: 'app-recipe-info',
-  templateUrl: './recipe-info.component.html',
-  styleUrls: ['./recipe-info.component.css']
+  selector: 'app-recipe-detail',
+  templateUrl: './recipe-detail.component.html',
+  styleUrls: ['./recipe-detail.component.css']
 })
-export class RecipeInfoComponent implements OnInit {
+export class RecipeDetailComponent implements OnInit {
 
   recipe: Recipe;
 
@@ -24,6 +24,11 @@ export class RecipeInfoComponent implements OnInit {
 
   goBack(): void {
     this.location.back();
+  }
+
+  save(): void {
+    this.recipeService.update(this.recipe)
+      .then(() => this.goBack());
   }
 
   ngOnInit(): void {

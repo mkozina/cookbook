@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { RecipesComponent } from './recipes/recipes.component';
-import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
-import { RecipeFormComponent } from './recipe-form/recipe-form.component';
-import { RecipeInfoComponent } from './recipe-info/recipe-info.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { RecipesComponent } from './components/recipes/recipes.component';
+import { RecipeDetailComponent } from './components/recipe-detail/recipe-detail.component';
+import { RecipeFormComponent } from './components/recipe-form/recipe-form.component';
+import { RecipeInfoComponent } from './components/recipe-info/recipe-info.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },

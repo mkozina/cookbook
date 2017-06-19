@@ -1,0 +1,16 @@
+<div *ngIf="recipe">
+	<h2>Recipe for {{recipe.name}}</h2>
+	<h3>Ingredients:</h3>
+	<ul>
+		<li *ngFor="let ingredient of recipe.ingredients">
+			{{ingredient}}
+		</li>
+	</ul>
+	<h3>Directions:</h3>
+	<ol>
+		<li *ngFor="let direction of recipe.directions">
+			{{direction}}
+		</li>
+	</ol>
+	<button (click)="goBack()">Back</button>
+</div>
