@@ -6,6 +6,10 @@
 	h5 { font-size: .83em; }
 	h6 { font-size: .67em; }
 	body { font-size: calc(2*1em); }
+	.btn {
+		font-size: 1em;
+		padding:4px 6px;
+	}
 }
 @media only screen and (min-width: 768px) {
 	h1 { font-size: 2em; }
@@ -15,6 +19,10 @@
 	h5 { font-size: .83em; }
 	h6 { font-size: .67em; }
 	body { font-size: calc(1.25*1em); }
+	.btn {
+		font-size: 1em;
+		padding:6px 12px;
+	}
 }
 @media only screen and (min-width: 992px) {
 	h1 { font-size: 2em; }
@@ -24,6 +32,10 @@
 	h5 { font-size: .83em; }
 	h6 { font-size: .67em; }
 	body { font-size: calc(1*1em); }
+	.btn {
+		font-size: 1em;
+		padding:8px 12px;
+	}
 }
 @media only screen and (min-width: 1200px) {
 	h1 { font-size: calc(1*2em); }
@@ -33,6 +45,10 @@
 	h5 { font-size: calc(1*.83em); }
 	h6 { font-size: calc(1*.67em); }
 	body { font-size: calc(0.75*1em); }
+	.btn {
+		font-size: 1em;
+		padding:10px 16px;
+	}
 }
 
 html { font-size: 1.5vw; }
