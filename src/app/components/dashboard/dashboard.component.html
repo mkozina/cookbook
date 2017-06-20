@@ -1,8 +1,16 @@
-<h3>Top Recipes</h3>
-<div class="grid grid-pad">
-	<a *ngFor="let recipe of recipes" [routerLink]="['/info', recipe.id]" class="col-1-4">
-		<div class="module recipe">
-			<h4>{{recipe.name}}</h4>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-8 col-xs-offset-2">
+			<h1 class="page-header">Top Recipes</h1>
+			<div class="row">
+				<a *ngFor="let recipe of recipes; let i = index" [routerLink]="['/info', recipe.id]">
+					<div class="col-xs-6 col-sm-3">
+						<img src="assets/images/1024px-No_image_available.svg.png" width="256" height="256" class="img-responsive" alt="thumbnail">
+						<h4 class="text-center">{{recipe.name}}</h4>
+					</div>
+					<div *ngIf="(i+1)%2 == 0"><div class="clearfix visible-xs-block"></div></div>
+				</a>
+			</div>
 		</div>
-	</a>
+	</div>
 </div>
