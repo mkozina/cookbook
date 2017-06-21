@@ -1,7 +1,9 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-xs-8 col-xs-offset-2">
+
 			<h1 class="page-header">Top Recipes</h1>
+
 			<div class="row">
 				<a *ngFor="let recipe of recipes; let i = index" [routerLink]="['/info', recipe.id]">
 					<div class="col-xs-6 col-sm-3">
@@ -11,6 +13,7 @@
 					<div *ngIf="(i+1)%2 == 0"><div class="clearfix visible-xs-block"></div></div>
 				</a>
 			</div>
+
 		</div>
 	</div>
 </div>
