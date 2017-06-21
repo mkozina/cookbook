@@ -13,9 +13,21 @@
 		<div class="collapse navbar-collapse"
 			[ngClass]="{ 'in': isIn }">
 			<ul class="nav navbar-nav" id="nav-links">
-				<li><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
-				<li><a routerLink="/recipes" routerLinkActive="active">Recipes</a></li>
-				<li><a routerLink="/form" routerLinkActive="active">Add recipe</a></li>
+				<li>
+					<a routerLink="/dashboard" routerLinkActive="active">
+						<span class="glyphicon glyphicon-th-large"></span> Dashboard
+					</a>
+				</li>
+				<li>
+					<a routerLink="/recipes" routerLinkActive="active">
+						<span class="glyphicon glyphicon-list"></span> Recipes
+					</a>
+				</li>
+				<li>
+					<a routerLink="/form" routerLinkActive="active">
+						<span class="glyphicon glyphicon-plus"></span> Add recipe
+					</a>
+				</li>
 			</ul>
 		</div>
 	</div>
