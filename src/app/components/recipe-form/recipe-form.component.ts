@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 import { Validators, FormControl, FormGroup, FormArray, FormBuilder } from '@angular/forms';
 
 import { RecipeService } from '../../services/recipe.service';
@@ -16,17 +16,13 @@ export class RecipeFormComponent implements OnInit {
 
   constructor(
     private recipeService: RecipeService,
-    private location: Location,
+    private router: Router,
     private fb: FormBuilder
   ) { }
 
-  goBack(): void {
-    this.location.back();
-  }
-
   add(model: Recipe): void {
     this.recipeService.create(model)
-      .then(() => this.goBack());
+      .then(() => this.router.navigate(['/recipes']));
   }
 
   addIngredient() {
