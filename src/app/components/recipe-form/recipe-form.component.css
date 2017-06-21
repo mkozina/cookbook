@@ -1,0 +1,23 @@
+.panel-body > .add {
+	margin-top: 20px;
+}
+
+.step {
+	margin-bottom: 20px;
+}
+
+.remove {
+	margin: 0 10px;
+}
+
+table {
+	width: 100%;
+}
+
+.cell-content {
+	width: 90%;
+}
+
+cell-button {
+	width: 10%;
+}
