@@ -13,6 +13,7 @@ export class RecipesComponent implements OnInit {
 
   recipes: Recipe[];
   selectedRecipe: Recipe;
+  state = false;
 
   constructor(
     private router: Router,
@@ -27,10 +28,6 @@ export class RecipesComponent implements OnInit {
     this.selectedRecipe = recipe;
   }
 
-  gotoForm(): void {
-    this.router.navigate(['/form']);
-  }
-
   gotoDetail(): void {
     this.router.navigate(['/detail', this.selectedRecipe.id]);
   }
@@ -42,6 +39,11 @@ export class RecipesComponent implements OnInit {
         this.recipes = this.recipes.filter(h => h !== recipe);
         if (this.selectedRecipe === recipe) { this.selectedRecipe = null; }
       });
+  }
+
+  toggleState() {
+    let bool = this.state;
+    this.state = bool === false ? true : false;
   }
 
   ngOnInit(): void {

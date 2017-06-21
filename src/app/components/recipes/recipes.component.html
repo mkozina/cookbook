@@ -1,34 +1,75 @@
-<h2>My recipes</h2>
-<p>
-	<button (click)="gotoForm()">Add</button>
-</p>
-<ul class="recipes">
-	<li *ngFor="let recipe of recipes"
-		[class.selected]="recipe === selectedRecipe"
-		(click)="onSelect(recipe)">
-		<span class="text">{{recipe.name}}</span>
-		<button class="delete"
-			(click)="delete(recipe); $event.stopPropagation()">
-			x
-		</button>
-	</li>
-</ul>
-<div *ngIf="selectedRecipe">
-	<h2>
-		Recipe for {{selectedRecipe.name}}
-	</h2>
-	<h3>Ingredients:</h3>
-	<ul>
-		<li *ngFor="let ingredient of selectedRecipe.ingredients">
-			{{ingredient}}
-		</li>
-	</ul>
-	<h3>Directions:</h3>
-	<ol>
-		<li *ngFor="let direction of selectedRecipe.directions">
-			{{direction}}
-		</li>
-	</ol>
-	<button (click)="gotoDetail()">Edit</button>
-	<button (click)="delete(recipe)">Delete</button>
+<div class="container-fluid">
+	<div class="row">
+
+		<div class="col-sm-3 col-md-2 sidebar" id="recipes-sidebar" [ngClass]="{ 'hidden-xs': state }">
+			<h1>My recipes</h1>
+			<ul class="nav nav-sidebar">
+				<li *ngFor="let recipe of recipes"
+					[class.selected]="recipe === selectedRecipe"
+					(click)="onSelect(recipe)"
+					(click)="toggleState()">
+					<span>{{recipe.name}}</span>
+				</li>
+			</ul>
+		</div>
+
+		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main hidden-xs"
+			id="recipes-content"
+			[ngClass]="{ 'hidden-xs': !state }">
+			<div class="row">
+				<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="visible-xs">
+								<button class="btn btn-default" id="menu-left"
+									(click)="toggleState()">
+									<span class="glyphicon glyphicon-menu-left"></span>
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<div *ngIf="selectedRecipe">
+
+						<div class="row">
+							<div class="col-xs-12">
+								<h1 class="page-header">Recipe for {{selectedRecipe.name}}</h1>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-8">
+								<h2>Ingredients:</h2>
+								<ul>
+									<li *ngFor="let ingredient of selectedRecipe.ingredients">
+										{{ingredient}}
+									</li>
+								</ul>
+							</div>
+							<div class="col-xs-4">
+								<img src="assets/images/1024px-No_image_available.svg.png" width="256" height="256" class="img-responsive " alt="thumbnail">
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-12">
+								<h2>Directions:</h2>
+								<ol>
+									<li *ngFor="let direction of selectedRecipe.directions">
+										{{direction}}
+									</li>
+								</ol>
+								<button class="btn btn-info" (click)="gotoDetail()">Edit</button>
+								<button class="btn btn-danger" (click)="delete(recipe)">Delete</button>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
 </div>
