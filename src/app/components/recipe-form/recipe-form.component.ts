@@ -47,12 +47,12 @@ export class RecipeFormComponent implements OnInit {
 
   ngOnInit() {
     this.myForm = this.fb.group({
-      name: ['', [Validators.required, Validators.minLength(5)]],
+      name: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(40)]],
       ingredients: this.fb.array([
-        ['', [Validators.required, Validators.minLength(5)]]
+        ['', [Validators.required, Validators.minLength(5), Validators.maxLength(80)]]
       ]),
       directions: this.fb.array([
-        ['', [Validators.required, Validators.minLength(25)]]
+        ['', [Validators.required, Validators.minLength(25), Validators.maxLength(800)]]
       ])
     });
   }

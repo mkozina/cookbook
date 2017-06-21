@@ -16,7 +16,7 @@
 					<div class="row">
 						<div class="col-xs-12">
 							<small *ngIf="!myForm.controls.name.valid" class="text-danger">
-								Name is required (minimum 5 characters).
+								Name is required (minimum 5 and maximum 40 characters).
 							</small>
 						</div>
 					</div>
@@ -42,7 +42,7 @@
 								</tr>
 							</table>
 							<small [hidden]="myForm.controls.ingredients.controls[i].valid" class="text-danger">
-								Ingredient must have minimum 5 characters.
+								Ingredient must have minimum 5 and maximum 80 characters.
 							</small>
 						</div>
 						<div class="add">
@@ -67,7 +67,7 @@
 								(click)="removeDirection(i)" class="glyphicon glyphicon-remove pull-right"></span>
 							<textarea formControlName="{{i}}" class="form-control"></textarea>
 							<small [hidden]="myForm.controls.directions.controls[i].valid" class="text-danger">
-								Direction must have minimum 25 characters.
+								Direction must have minimum 25 and maximum 800 characters.
 							</small>
 						</div>
 						<div class="add">
