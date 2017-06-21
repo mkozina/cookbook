@@ -30,11 +30,17 @@
 
 					<div class="panel-body">
 						<div *ngFor="let ingredient of myForm.controls.ingredients.controls; let i=index" class="step">
-<table><tr>
-<td class="cell-content">							<input type="text" formControlName="{{i}}" class="form-control"></td>
-<td class="cell-button">							<span *ngIf="myForm.controls.ingredients.controls.length > 1"
-								(click)="removeIngredient(i)" class="glyphicon glyphicon-remove remove"></span></td>
-</tr></table>
+							<table>
+								<tr>
+									<td class="cell-content">
+										<input type="text" formControlName="{{i}}" class="form-control">
+									</td>
+									<td class="cell-button">
+										<span *ngIf="myForm.controls.ingredients.controls.length > 1"
+											(click)="removeIngredient(i)" class="glyphicon glyphicon-remove remove"></span>
+									</td>
+								</tr>
+							</table>
 							<small [hidden]="myForm.controls.ingredients.controls[i].valid" class="text-danger">
 								Ingredient must have minimum 5 characters.
 							</small>
